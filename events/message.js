@@ -2,7 +2,7 @@ require('dotenv').config();
 const ts = require('../modules/tweetsplit.js');
 module.exports = (client, message) => {
 
-    if (message.content.indexOf(process.env.PREFIX) !== 0 && client.getSettings(message.guild).daemonMode == true) {
+    if (message.content.indexOf(process.env.PREFIX) !== 0 && client.getSettings(message.guild).daemonMode == true && message.guild) {
         ts(client, message);
     }
 
