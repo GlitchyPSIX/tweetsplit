@@ -1,5 +1,5 @@
 module.exports = (client) => {
-    client.user.setActivity("with a knife?", {
+    client.user.setActivity(`${process.env.PREFIX}help | ${client.version}`, {
         type: 0
     })
     console.log('Tweetsplit is working.')

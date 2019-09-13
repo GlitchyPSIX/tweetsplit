@@ -1,5 +1,5 @@
-exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
-    if (!args || args.length < 1) return message.reply("Must provide a command to reload. Derp.");
+exports.run = async (client, message, args) => { // eslint-disable-line no-unused-vars
+    if (!args || args.length < 1) return message.reply("What are we reloading?");
     const command = client.commands.get(args[0]) || client.commands.get(client.aliases.get(args[0]));
     let response = await client.unloadCommand(args[0]);
     if (response) return message.reply(`Error Unloading: ${response}`);
@@ -14,11 +14,10 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     enabled: true,
     guildOnly: false,
     aliases: [],
-      permLevel: "Bot Admin",
-    ownerOnly: true
+      permLevel: 3
   };
   
-  exports.help = {
+exports.help = {
     name: "reload",
     category: "System",
     description: "Reloads a command that\"s been modified.",

@@ -8,53 +8,52 @@ const {
 const readdir = promisify(require("fs").readdir);
 const Enmap = require("enmap");
 
-// Require our logger
+
 client.logger = require("./modules/Logger");
 
-// Let's start by getting some useful functions that we'll use throughout
-// the bot, like logs and elevation features.
 require("./modules/functions.js")(client);
 
-// Aliases and commands are put in collections where they can be read from,
-// catalogued, listed, etc.
 client.commands = new Enmap();
 client.aliases = new Enmap();
 
 //Twitter credentials.
+//You need a Bearer Token to use this.
+//(Higher ratelimits! ...Albeit the ones used for tweet fetching are both the same.)
 client.twitter = new Twitter({
     consumer_key: process.env.TWITTER_KEY,
     consumer_secret: process.env.TWITER_SECRET,
     bearer_token: process.env.TWITTER_BEARER
 })
 
-// Now we integrate the use of Evie's awesome EnMap module, which
-// essentially saves a collection to disk. This is great for per-server configs,
-// and makes things extremely easy for this purpose.
+client.version = "Beta 2 [Codename Altair v0.2a]"
+
+//Per-server settings based in enmap
 client.settings = new Enmap({name: "settings"});
 
 const initialize = async () => {
-    // Load **commands** into memory. Brought from GuideBot
+    // Load **commands** into memory.
     const cmdFiles = await readdir("./commands/");
-    client.logger.log(`Loading a total of ${cmdFiles.length} commands.`);
+    client.logger.log(`Loading ${cmdFiles.length} commands.`);
     cmdFiles.forEach(f => {
       if (!f.endsWith(".js")) return;
       const response = client.loadCommand(f);
       if (response) console.log(response);
     });
 
-    // Load events. Brought from GuideBot
+    // Load events into memory.
     const evtFiles = await readdir("./events/");
-    client.logger.log(`Loading a total of ${evtFiles.length} events.`);
+    client.logger.log(`Loading ${evtFiles.length} events.`);
     evtFiles.forEach(file => {
         const eventName = file.split(".")[0];
         client.logger.log(`Loading Event: ${eventName}`);
         const event = require(`./events/${file}`);
-        // Bind the client to any event, before the existing arguments
-        // provided by the discord.js event. 
         client.on(eventName, event.bind(null, client));
     });
 
+    //Login client
     client.login(process.env.TOKEN);
+
+    //Express server: will be used for external API and for use with Uptime Robot (Glitch shutdown workaround)
     var express = require('express');
     var app = express();
     
@@ -73,5 +72,5 @@ const initialize = async () => {
     });
 
 }
-
+//init
 initialize();

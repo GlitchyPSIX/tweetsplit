@@ -10,9 +10,10 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "better-sqlite-pool": "^0.2.2",
     "discord.js": "^11.5.1",
     "dotenv": "^8.0.0",
-    "enmap": "github:eslachance/enmap#v3",
+    "enmap": "^5.1.2",
     "eslint": "^6.1.0",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
