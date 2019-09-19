@@ -25,7 +25,7 @@ client.twitter = new Twitter({
     bearer_token: process.env.TWITTER_BEARER
 })
 
-client.version = "Beta 2 [Codename Altair v0.2a]"
+client.version = "Beta 2.1 [Codename Altair v0.2.1a]"
 
 //Per-server settings based in enmap
 client.settings = new Enmap({name: "settings"});

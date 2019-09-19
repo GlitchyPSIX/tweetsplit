@@ -1,6 +1,6 @@
 module.exports = (client, message) => {
 
-    let tweetID = message.content.match(/\/status\/(\d+)/);
+    let tweetID = message.content.match(/(?:twitter.com)\/\w+\/status\/(\d{8,})/);
     if (tweetID != null) {
         let params = {
             id: tweetID[1],
