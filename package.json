@@ -4,8 +4,8 @@
   "description": "Tweetsplit Alpha",
   "main": "server.js",
   "scripts": {
-    "start": "npx nodemon server.js",
-    "no-nodemon": "node server.js"
+    "start": "node server.js",
+    "nodemon": "npx nodemon server.js"
   },
   "dependencies": {
     "better-sqlite-pool": "^0.2.2",
