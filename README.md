@@ -25,11 +25,11 @@ Splits a Tweet in its pictures given its URL.
 
 * **ts.ar <on/off>**
 Turns *Daemon Mode* (Automatic split mode) on or off. (Requires **Owner** or **Administrator permission**)
-* If Daemon is off, users will have to split Tweets manually by using `ts.plit`.
+ * If Daemon is off, users will have to split Tweets manually by using `ts.plit`.
 
-* **ts.ignorechannel <channel|this>**
-Whether this channel will be observed by Daemon or not. (using `this` instead of a channel mention or ID refers to the channel the command was called in). (Requires **Owner** or **Administrator permission**)
-* If Daemon is off, this is practically useless.
+* **ts.ignorechannel <channel/this>**
+Whether the provided channel will be observed by Daemon or not. Using it without any arguments will show the list of ignored channels. (using `this` instead of a channel mention or ID refers to the channel the command was called in). (Requires **Owner** or **Administrator permission**)
+ * If Daemon is off, this is practically useless.
 
 ## Selfhosting
 
