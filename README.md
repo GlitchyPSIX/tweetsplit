@@ -12,6 +12,8 @@ Discord as of today currently uses a single image embed to display Tweets. This 
 
 [Here, bud](https://discordapp.com/oauth2/authorize/?permissions=51200&scope=bot&client_id=620391818105978920)
 
+I'm keeping tabs on the Twitter API usage. If the bots suddenly goes down, don't hesitate to contact me via any way.
+
 ## Usage
 
 * **ts.help**
