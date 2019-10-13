@@ -42,6 +42,8 @@ Turns *Daemon Mode* (Automatic split mode) on or off. (Requires **Owner** or **A
 
      * ``OWNERID`` - Your Discord user ID. This will allow you to use commands such as ``eval``.
 
+     * ``TOKEN`` - Discord Application token. (Keep it secret!)
+
      * ``PORT`` - Port for your Express webserver. (Can be omitted if running from Glitch)
 
      * ``TWITTER_KEY`` - Your Twitter Application Consumer Key
