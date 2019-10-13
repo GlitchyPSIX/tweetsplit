@@ -4,7 +4,10 @@ module.exports = (client, message) => {
 
     var botPrefix = process.env.PREFIX || "ts." 
 
-    if (message.content.indexOf(botPrefix) !== 0 && client.getSettings(message.guild).daemonMode == true && message.guild) {
+    if (message.content.indexOf(botPrefix) !== 0 &&
+        client.getSettings(message.guild).daemonMode == true &&
+        client.getSettings(message.guild).daemonIgnoreChannels.find(x => { return x == message.channel.id }) == undefined &&
+        message.guild) {
         ts(client, message);
     }
 
