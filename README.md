@@ -7,12 +7,15 @@ A simple Discord bot that automatically (configurable) posts the pictures from a
 ## Why?
 
 Discord as of today currently uses a single image embed to display Tweets. This only shows the first image and there's no way to know if it has more than one image unless the poster specifies so, and even then it may be a hassle to have to enter Twitter to see all images.
+(2020 update: Discord now does this but only on Desktop. It is possible that Mobile will get so too, but it's currently unknown. The bot is now down because of this.)
 
 ## Invite
 
-[Here, bud](https://discordapp.com/oauth2/authorize/?permissions=51200&scope=bot&client_id=620391818105978920)
+~~[Here, bud]
 
-I'm keeping tabs on the Twitter API usage. If the bots suddenly goes down, don't hesitate to contact me via any way.
+I'm keeping tabs on the Twitter API usage. If the bots suddenly goes down, don't hesitate to contact me via any way.~~
+
+Invite taken off because of the 2020 update above
 
 ## Usage
 
