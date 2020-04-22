@@ -11,9 +11,9 @@ Discord as of today currently uses a single image embed to display Tweets. This 
 
 ## Invite
 
-~~[Here, bud]
+~~[Here, bud]~~
 
-I'm keeping tabs on the Twitter API usage. If the bots suddenly goes down, don't hesitate to contact me via any way.~~
+~~I'm keeping tabs on the Twitter API usage. If the bots suddenly goes down, don't hesitate to contact me via any way.~~
 
 Invite taken off because of the 2020 update above
 
